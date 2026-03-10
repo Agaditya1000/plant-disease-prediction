@@ -1,98 +1,88 @@
-#🌱 DEPLANT — Deep Learning for Plant Disease Prediction
+# 🌱 DEPLANT — Deep Learning for Plant Disease Prediction
 
-#📌 Project Overview
+## 📌 Project Overview
 DEPLANT is an AI‑based plant disease detection system that uses deep learning models to identify plant diseases from leaf images. The system analyzes uploaded images, predicts the disease type, estimates infection severity, and provides results through a web interface.
 
 The goal of this project is to support farmers with early disease detection and promote smart farming practices using Artificial Intelligence.
 
-#🚀 Features
-🌿 Automatic plant disease detection from leaf images
+---
 
-🤖 Multiple ML/DL models implemented:
+## 🚀 Features
+- 🌿 Automatic plant disease detection from leaf images
+- 🤖 Multiple ML/DL models implemented:
+  - CNN (Convolutional Neural Network)
+  - SVM (Support Vector Machine)
+  - ResNet50 (Transfer Learning)
+- 📊 Model comparison and performance evaluation
+- 🔬 Disease severity estimation using HSV segmentation
+- 🌐 Streamlit web interface for real‑time prediction
+- 💬 AgriBot assistant for crop and disease guidance
 
-CNN (Convolutional Neural Network)
+---
 
-SVM (Support Vector Machine)
+## 📂 Dataset
+This project uses the **PlantVillage Dataset**.
 
-ResNet50 (Transfer Learning)
-
-📊 Model comparison and performance evaluation
-
-🔬 Disease severity estimation using HSV segmentation
-
-🌐 Streamlit web interface for real‑time prediction
-
-💬 AgriBot assistant for crop and disease guidance
-
-📂 Dataset
-This project uses the PlantVillage Dataset.
-
-Dataset Details
-Total Images: ~22,000
-
-Classes: 16 plant disease categories
-
-Crops included:
-
-Tomato
-
-Potato
-
-Pepper
+### Dataset Details
+- Total Images: ~22,000
+- Classes: 16 plant disease categories
+- Crops included:
+  - Tomato
+  - Potato
+  - Pepper
 
 Dataset includes:
+- Healthy leaves
+- Diseased leaves
 
-Healthy leaves
+---
 
-Diseased leaves
+## ⚙️ Technologies Used
 
-⚙️ Technologies Used
-Programming Language
-Python
+### Programming Language
+- Python
 
-Libraries
-TensorFlow
+### Libraries
+- TensorFlow
+- Keras
+- OpenCV
+- NumPy
+- Scikit‑learn
+- Matplotlib
 
-Keras
+### Deployment
+- Streamlit
 
-OpenCV
+---
 
-NumPy
+## 🧠 Models Implemented
 
-Scikit‑learn
+### 1️⃣ CNN (Convolutional Neural Network)
+- Baseline deep learning model
+- Learns spatial patterns from images
+- Training Accuracy: ~92%
 
-Matplotlib
+---
 
-Deployment
-Streamlit
+### 2️⃣ SVM (Support Vector Machine)
+- Traditional machine learning model
+- Uses extracted features for classification
+- Accuracy: ~63%
 
-🧠 Models Implemented
-1️⃣ CNN (Convolutional Neural Network)
-Baseline deep learning model
+---
 
-Learns spatial patterns from images
+### 3️⃣ ResNet50 (Transfer Learning)
+- Deep residual network
+- Pretrained on ImageNet
+- Training Accuracy: ~90.9%
+- Validation Accuracy: ~87.3%
+- Best performing model
 
-Training Accuracy: ~92%
+---
 
-2️⃣ SVM (Support Vector Machine)
-Traditional machine learning model
+## 🖼️ System Workflow
 
-Uses extracted features for classification
-
-Accuracy: ~63%
-
-3️⃣ ResNet50 (Transfer Learning)
-Deep residual network
-
-Pretrained on ImageNet
-
-Training Accuracy: ~90.9%
-
-Validation Accuracy: ~87.3%
-
-Best performing model
-
-🖼️ System Workflow
+```
 Leaf Image Input
        ↓
 Image Preprocessing
@@ -106,82 +96,89 @@ HSV Segmentation
 Infected Area Percentage
        ↓
 Disease Stage (Early / Moderate / Severe)
-🔬 Severity Detection
+```
+
+---
+
+## 🔬 Severity Detection
+
 Severity is calculated using image processing techniques.
 
-Steps:
+### Steps
+1. Convert image from RGB → HSV
+2. Detect infected regions using color thresholds
+3. Calculate infected pixels
 
-Convert image from RGB → HSV
+### Formula
 
-Detect infected regions using color thresholds
-
-Calculate infected pixels
-
-Formula:
-
+```
 Severity (%) = (Infected Pixels / Total Pixels) × 100
-Stage Classification
-Severity	Stage
-<10%	Early Stage
-10–30%	Moderate Stage
->30%	Severe Stage
-🌐 Web Application (Streamlit)
-The trained model is deployed using Streamlit, allowing users to:
+```
 
-Upload plant leaf images
+### Stage Classification
 
-Get instant disease predictions
+| Severity | Stage |
+|--------|--------|
+| <10% | Early Stage |
+| 10–30% | Moderate Stage |
+| >30% | Severe Stage |
 
-View infection severity
+---
 
-Access AgriBot agricultural assistant
+## 🌐 Web Application (Streamlit)
 
-📊 Evaluation Metrics
+The trained model is deployed using **Streamlit**, allowing users to:
+
+- Upload plant leaf images
+- Get instant disease predictions
+- View infection severity
+- Access AgriBot agricultural assistant
+
+---
+
+## 📊 Evaluation Metrics
+
 The models were evaluated using:
 
-Accuracy
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
 
-Precision
+---
 
-Recall
+## 📈 Results Summary
 
-F1 Score
+| Model | Training Accuracy | Validation Accuracy |
+|------|------|------|
+| CNN | ~92% | ~63% |
+| SVM | ~63% | Lower than CNN |
+| ResNet50 | **~90.9%** | **~87.3%** |
 
-Confusion Matrix
-
-📈 Results Summary
-Model	Training Accuracy	Validation Accuracy
-CNN	~92%	~63%
-SVM	~63%	Lower than CNN
-ResNet50	~90.9%	~87.3%
 ResNet50 achieved the best performance and was selected as the final model.
 
-🔮 Future Improvements
-Mobile application integration
+---
 
-Real‑time camera disease detection
+## 🔮 Future Improvements
+- Mobile application integration
+- Real‑time camera disease detection
+- Larger real‑world datasets
+- IoT‑based crop monitoring
+- Automated treatment recommendations
 
-Larger real‑world datasets
+---
 
-IoT‑based crop monitoring
+## 👥 Contributors
+- Aditya Kumar Gupta  
+- Pratishtha Srivastava  
+- Dr. Swathy R (Supervisor)
 
-Automated treatment recommendations
-
-👥 Contributors
-Aditya Kumar Gupta
-
-Pratishtha Srivastava
-
-Dr. Swathy R (Supervisor)
-
-Department of Networking and Communications
-SRM Institute of Science and Technology
+Department of Networking and Communications  
+SRM Institute of Science and Technology  
 Chennai, India
 
-📜 License
+---
+
+## 📜 License
 This project is developed for academic and research purposes.
-
-If you want, I can also make a much better GitHub‑style README (with badges, architecture diagram, and project structure) that will make your repository look very professional.
-
-
-Show less

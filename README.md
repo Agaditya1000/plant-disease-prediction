@@ -1,10 +1,11 @@
-🌱 DEPLANT — Deep Learning for Plant Disease Prediction
-📌 Project Overview
+#🌱 DEPLANT — Deep Learning for Plant Disease Prediction
+
+#📌 Project Overview
 DEPLANT is an AI‑based plant disease detection system that uses deep learning models to identify plant diseases from leaf images. The system analyzes uploaded images, predicts the disease type, estimates infection severity, and provides results through a web interface.
 
 The goal of this project is to support farmers with early disease detection and promote smart farming practices using Artificial Intelligence.
 
-🚀 Features
+#🚀 Features
 🌿 Automatic plant disease detection from leaf images
 
 🤖 Multiple ML/DL models implemented:

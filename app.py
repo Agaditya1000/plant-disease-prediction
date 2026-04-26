@@ -291,8 +291,8 @@ with st.sidebar:
         index=0,
     )
 
-    # User-provided API key for AgriBot
-    api_key = st.text_input(t("Enter Gemini API Key", lang_code), type="password")
+    # Hardcoded API key (invisible to frontend)
+    api_key = "AIzaSyCnxNBQBBv1m3YZz6DnbdRGRCiR2anrSRc"
 
 
 # ─────────────────────────────────────────────

@@ -268,7 +268,7 @@ with st.sidebar:
     st.markdown(f"### 🧠 {t('Model Details', lang_code)}")
     st.markdown(
         f"""
-        - **{t('Architecture', lang_code)}:** {t('CNN (Convolutional Neural Network)', lang_code)}
+        - **{t('Architecture', lang_code)}:** {t('CNN , VGG16 , ResNet', lang_code)}
         - **{t('Dataset', lang_code)}:** PlantVillage
         - **{t('Classes', lang_code)}:** {t('16 disease categories', lang_code)}
         - **{t('Input Size', lang_code)}:** 224 × 224 px
@@ -291,6 +291,8 @@ with st.sidebar:
         index=0,
     )
 
+    # Hardcoded API key (invisible to frontend)
+    api_key = "AIzaSyCnxNBQBBv1m3YZz6DnbdRGRCiR2anrSRc"
 
 
 # ─────────────────────────────────────────────
@@ -686,10 +688,10 @@ elif page == page_options[3]:
         st.markdown(
             """
             <div class="card" style="border-left-color: #FFC107;">
-                <h3>✅ SVM </h3>
+                <h3>✅ VGG16 </h3>
                 <p>
-                    Support Vector Machine model planned for comparative analysis.
-                    Will serve as a baseline for evaluating deep learning improvements.
+                    VGG16 architecture used for feature extraction and high-accuracy classification.
+                    Optimized for detecting fine-grained patterns in leaf textures.
                 </p>
             </div>
             """,
